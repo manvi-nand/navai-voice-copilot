@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "NavAI",
+    "slug": "navai",
+    "scheme": "navai",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "NavAI needs the microphone to hear your voice questions while driving.",
+        "NSLocationWhenInUseUsageDescription": "NavAI uses your location to give route, traffic and nearby-place answers.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "NavAI uses background location for proactive traffic alerts on your route.",
+        "UIBackgroundModes": ["audio", "location"]
+      }
+    },
+    "android": {
+      "permissions": [
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      [
+        "expo-av",
+        { "microphonePermission": "Allow NavAI to use the microphone." }
+      ]
+    ],
+    "extra": {
+      "backendHttpUrl": "http://YOUR_LOCAL_IP:8000",
+      "backendWsUrl": "ws://YOUR_LOCAL_IP:8000/ws/voice",
+      "livekitUrl": "ws://YOUR_LOCAL_IP:7880"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+
+# Node / Expo
+node_modules/
+.expo/
+dist/
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Secrets / models
+*.ppn
+backend/.env
+
+# Test / tool caches
+.pytest_cache/
+.watchman-cookie-*
